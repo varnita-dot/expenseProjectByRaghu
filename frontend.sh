@@ -1,4 +1,4 @@
-log_message = /tmp/expense.log
+source common.sh
 
 echo installing nginx
 dnf install nginx -y >>log_message

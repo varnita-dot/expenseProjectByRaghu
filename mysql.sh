@@ -1,4 +1,4 @@
-log_message=/tmp/expense.log
+source common.sh
 
 echo disable module
 dnf module disable mysql -y >>$log_message

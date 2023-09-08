@@ -1,4 +1,4 @@
-log_message=/tmp/expense.log
+source common.sh
 
 echo download rpm file
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash  >>$log_message

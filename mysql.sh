@@ -18,5 +18,9 @@ systemctl start mysqld >>$log_message
 echo installation
 mysql_secure_installation --set-root-pass ExpenseApp@1 >>$log_message
 
+echo view password
+mysql -uroot -pExpenseApp@1
+
+
 
 

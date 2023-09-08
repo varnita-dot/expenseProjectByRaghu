@@ -13,7 +13,7 @@ echo removed old content
 rm -rf /usr/share/nginx/html/*   &>>$log_message
 
 echo download frontend.zip
-curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip   &>>$log_message
+curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip   &&>>$log_message
 
 echo change the directory
 cd /usr/share/nginx/html  &>>$log_message

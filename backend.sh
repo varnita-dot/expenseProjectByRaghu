@@ -20,7 +20,7 @@ echo make dir
 mkdir /app  &>>$log_message
 
 echo download backend.zip
-curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip  &>>$log_message
+curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip  &&>>$log_message
 
 echo cd app
 cd /app  &>>$log_message

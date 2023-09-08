@@ -1,4 +1,5 @@
 source common.sh
+component=frontend
 
 echo installing nginx
 dnf install nginx -y &>>$log_message
@@ -16,17 +17,13 @@ echo removed old content
 rm -rf /usr/share/nginx/html/*   &>>$log_message
 echo $?
 
-echo download frontend.zip
-curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip   &&>>$log_message
-echo $?
+download_and_extract
 
 echo change the directory
 cd /usr/share/nginx/html  &>>$log_message
 echo $?
 
-echo unzip frontend.zip
-unzip /tmp/frontend.zip  &>>$log_message
-echo $?
+
 
 echo restart nginx
 systemctl restart nginx  &>>$log_message

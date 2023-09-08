@@ -47,4 +47,4 @@ echo install mysql
 dnf install mysql -y  >>$log_message
 
 echo load pw
-mysql -h sql.varraj20316.online -uroot -pExpenseApp@1 < /app/schema/backend. >>$log_message
+mysql -h sql.varraj20316.online -uroot -pExpenseApp@1 < /app/schema/backend.sql   >>$log_message

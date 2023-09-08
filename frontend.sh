@@ -21,3 +21,5 @@ unzip /tmp/frontend.zip
 
 echo restart nginx
 systemctl restart nginx
+
+echo end of frontend

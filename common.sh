@@ -1,1 +1,1 @@
-log_message = /tmp/expense.log
+log_message=/tmp/expense.log

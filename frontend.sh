@@ -3,8 +3,13 @@ component=frontend
 
 echo installing nginx
 dnf install nginx -y &>>$log_message
-echo $?
 
+if[$? -eq 0 ]; then
+  echo -e "\e[32mSUCCESS\e[0m"
+  else
+    echo -e "\e[31mFAILED\e[0m"
+exit 1
+fi
 cp  expense.conf /etc/nginx/default.d/expense.conf &>>$log_message
 echo $?
 

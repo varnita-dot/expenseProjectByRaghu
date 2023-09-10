@@ -6,7 +6,7 @@ download_and_extract(){
   curl  -s -o /tmp/$component.zip https://expense-artifacts.s3.amazonaws.com/$component.zip   &&>>$log_message
   extract_status
 
-  echo unzip $component.zip
+  echo unzip file in one file
   unzip /tmp/$component.zip  &>>$log_message
   extract_status
   echo end of function

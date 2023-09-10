@@ -3,7 +3,7 @@ log_message=/tmp/expense.log
 download_and_extract(){
   echo inside function
   echo download $component.zip
-  curl  -s -o /tmp/$component.zip https://expense-artifacts.s3.amazonaws.com/$component.zip   &&>>$log_message
+  curl  -s -o /tmp/$component.zip https://expense-artifacts.s3.amazonaws.com/$component.zip   &>>$log_message
   extract_status
 
   echo unzip file in one file

@@ -28,7 +28,7 @@ extract_status
 
 echo restart nginx
 systemctl restart nginx  &>>$log_message
+extract_status
 
 
 echo end of frontend
-extract_status

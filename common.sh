@@ -2,16 +2,24 @@ log_message=/tmp/expense.log
 
 download_and_extract(){
   echo inside function
-  echo download $component.zip
-  curl  -s -o /tmp/$component.zip https://expense-artifacts.s3.amazonaws.com/$component.zip   &>>$log_message
+  echo Download $component Code
+    curl -s -o /tmp/$component.zip https://expense-artifacts.s3.amazonaws.com/$component.zip >>$log_file
   extract_status
 
-  echo unzip file in one file
-  unzip /tmp/$component.zip  &>>$log_message
+  echo Extracting $component Code
+    unzip /tmp/$component.zip >>$log_file
   extract_status
   echo end of function
 
 }
+
+
+
+  stat_check
+
+
+  stat_check
+
 
 extract_status(){
   if [ $? -eq 0 ]; then

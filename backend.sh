@@ -1,4 +1,5 @@
 source common.sh
+component=frontend
 
 echo download rpm file
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash  &>>$log_message

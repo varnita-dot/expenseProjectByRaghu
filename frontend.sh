@@ -3,7 +3,6 @@ component=frontend
 
 echo installing nginx
 dnf install nginx -y &>>$log_message
-
 extract_status
 
 cp  expense.conf /etc/nginx/default.d/expense.conf &>>$log_message
@@ -19,7 +18,7 @@ rm -rf /usr/share/nginx/html/*   &>>$log_message
 extract_status
 
 download_and_extract
-extract_status
+
 
 echo change the directory
 cd /usr/share/nginx/html  &>>$log_message
